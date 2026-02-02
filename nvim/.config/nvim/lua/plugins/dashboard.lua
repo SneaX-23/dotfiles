@@ -4,7 +4,6 @@ return {
     dashboard = {
       enabled = true,
 
-      -- REQUIRED for multi-pane
       width = 60,
       pane_gap = 4,
 
