@@ -66,7 +66,24 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='ls --color'
 alias c='clear'
+alias vim='nvim'
 
 
 # shell integrations
 
+# Obsidian setup 
+export VAULT_DIR="$HOME/projects/Obsidian/The Begining"
+
+# Quick jump to vault
+alias vault="cd '$VAULT_DIR'"
+
+alias og="~/.local/bin/obsidian_organize.sh"
+# 'on' command: Create a new note and open it in Neovim
+on() {
+  local title="$1"
+  local filename="${VAULT_DIR}/inbox/${title}.md"
+  # Create inbox if it doesn't exist
+  mkdir -p "${VAULT_DIR}/inbox"
+  # Create file and open in nvim
+  nvim "$filename"
+}

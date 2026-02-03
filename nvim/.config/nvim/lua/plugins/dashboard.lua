@@ -23,6 +23,12 @@ return {
           { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
           {
+            icon = "󰠮 ",
+            key = "v",
+            desc = "Obsidian Vault",
+            action = ":cd ~/projects/Obsidian/The\\ Begining | lua Snacks.dashboard.pick('files')",
+          },
+          {
             icon = " ",
             key = "c",
             desc = "Config",

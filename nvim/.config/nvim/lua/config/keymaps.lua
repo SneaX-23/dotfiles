@@ -4,3 +4,9 @@
 local map = vim.keymap.set
 
 map("i", "jk", "<Esc>", { desc = "Escape" })
+
+-- Obsidian Mappings
+map("n", "<leader>on", ":ObsidianTemplate new_note<cr>", { desc = "Insert New Note Template" })
+map("n", "<leader>os", ":ObsidianSearch<cr>", { desc = "Search Vault (Telescope)" })
+map("n", "<leader>ot", ":ObsidianTags<cr>", { desc = "Search Tags" })
+map("n", "<leader>ol", ":ObsidianLinks<cr>", { desc = "Show Links in Note" })
