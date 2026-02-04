@@ -68,6 +68,8 @@ alias ls='ls --color'
 alias c='clear'
 alias vim='nvim'
 
+# alias fuzzy='fzf --preview="cat {}" | xargs -r nvim'
+# alias supercd='cd "$(fzf --preview="if [ -d {} ]; then ls -la {}; else cat {}; fi" | xargs -r dirname)"'
 
 # shell integrations
 
