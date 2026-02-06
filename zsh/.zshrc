@@ -67,7 +67,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias c='clear'
 alias vim='nvim'
+alias v='nvim'
 alias gnome-settings="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+alias t='tmux'
 # alias fuzzy='fzf --preview="cat {}" | xargs -r nvim'
 # alias supercd='cd "$(fzf --preview="if [ -d {} ]; then ls -la {}; else cat {}; fi" | xargs -r dirname)"'
 
