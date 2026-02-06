@@ -54,6 +54,77 @@ tiling_drag modifier titlebar
 # force open gnome-control-center
 bindsym $mod+g exec --no-startup-id env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 
+# flamesot setup
+exec --no-startup-id flameshot
+bindsym --release Print exec --no-startup-id flameshot gui
+
+# border setting 
+hide_edge_borders none
+
+default_border pixel 2
+default_floating_border pixel 2
+
+# Force this rule for all windows to ensure existing ones comply
+for_window [class="^.*"] border pixel 2
+
+gaps inner 5
+
+# Outer gaps (additional space only between window and screen edge)
+gaps outer 3
+
+# Only show gaps when there is more than one window
+smart_gaps on
+
+
+# # Set variables for default gaps
+# set $mode_gaps Gaps: (o) outer, (i) inner
+# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+#
+# # Bind the gaps mode to Mod+Shift+g
+# bindsym $mod+Shift+g mode "$mode_gaps"
+#
+# mode "$mode_gaps" {
+#         bindsym o      mode "$mode_gaps_outer"
+#         bindsym i      mode "$mode_gaps_inner"
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
+#
+# mode "$mode_gaps_inner" {
+#         # Modify inner gaps for the current workspace
+#         bindsym plus  gaps inner current plus 5
+#         bindsym minus gaps inner current minus 5
+#         bindsym 0     gaps inner current set 0
+#
+#         # Modify inner gaps for all workspaces (Global)
+#         bindsym Shift+plus  gaps inner all plus 5
+#         bindsym Shift+minus gaps inner all minus 5
+#         bindsym Shift+0     gaps inner all set 0
+#
+#         bindsym Return mode "$mode_gaps"
+#         bindsym Escape mode "default"
+# }
+#
+# mode "$mode_gaps_outer" {
+#         # Modify outer gaps for the current workspace
+#         bindsym plus  gaps outer current plus 5
+#         bindsym minus gaps outer current minus 5
+#         bindsym 0     gaps outer current set 0
+#
+#         # Modify outer gaps for all workspaces (Global)
+#         bindsym Shift+plus  gaps outer all plus 5
+#         bindsym Shift+minus gaps outer all minus 5
+#         bindsym Shift+0     gaps outer all set 0
+#
+#         bindsym Return mode "$mode_gaps"
+#         bindsym Escape mode "default"
+# }
+
+
+
+# Set the title bar font to 0 as a secondary fail-safe to keep the top thin
+# font pango:JetBrains Mono 0
 
 
 # start a terminal
@@ -208,3 +279,6 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id /home/sneax/.config/polybar/launch.sh
+
+# Restore the last set wallpaper on login/reboot
+exec --no-startup-id nitrogen --restore
