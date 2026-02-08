@@ -280,6 +280,6 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id /home/sneax/.config/polybar/launch.sh
-
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf > /dev/null 2>&1
 # Restore the last set wallpaper on login/reboot
 exec --no-startup-id nitrogen --restore

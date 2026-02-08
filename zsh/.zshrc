@@ -84,10 +84,13 @@ alias vault="cd '$VAULT_DIR'"
 alias og="~/.local/bin/obsidian_organize.sh"
 # 'on' command: Create a new note and open it in Neovim
 on() {
+  if [[ $# -eq 0 ]]; then
+    echo "No title provided. Please provide a title."
+    echo "Example: on 'todo_some_day'"
+    return 1
+  fi
   local title="$1"
   local filename="${VAULT_DIR}/inbox/${title}.md"
-  # Create inbox if it doesn't exist
   mkdir -p "${VAULT_DIR}/inbox"
-  # Create file and open in nvim
   nvim "$filename"
 }
