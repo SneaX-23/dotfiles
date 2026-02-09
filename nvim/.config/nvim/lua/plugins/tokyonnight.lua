@@ -2,11 +2,13 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
+    priority = 1000,
     opts = {
-      transparent = true,
+      style = "night",
+      transparent = true, -- Keep main transparency
       styles = {
-        sidebars = "transparent",
-        floats = "transparent",
+        sidebars = "transparent", -- Keep sidebar transparency
+        floats = "transparent", -- Keep float transparency
       },
     },
   },

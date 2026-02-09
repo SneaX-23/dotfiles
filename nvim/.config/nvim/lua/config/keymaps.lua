@@ -6,6 +6,10 @@ local map = vim.keymap.set
 map("i", "jk", "<Esc>", { desc = "Escape" })
 map("i", "jj", "<Esc>", { desc = "Escape" })
 
+-- Center cursor after scrolling half-page
+map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+
 -- Obsidian Mappings
 map("n", "<leader>on", ":ObsidianTemplate new_note<cr>", { desc = "Insert New Note Template" })
 map("n", "<leader>os", ":ObsidianSearch<cr>", { desc = "Search Vault (Telescope)" })
