@@ -94,3 +94,6 @@ on() {
   mkdir -p "${VAULT_DIR}/inbox"
   nvim "$filename"
 }
+
+# start tmux 
+
