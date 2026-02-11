@@ -64,8 +64,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 
 # Aliases
-alias ls='ls --color'
-alias c='clear'
+# alias ls='ls --color'
+# alias c='clear'
 alias vim='nvim'
 alias v='nvim'
 alias gnome-settings="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
@@ -95,5 +95,6 @@ on() {
   nvim "$filename"
 }
 
-# start tmux 
+# source omarch alias
+source ~/.local/share/omarchy/default/bash/aliases
 
