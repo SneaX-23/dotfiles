@@ -1,38 +1,32 @@
-format = """
-[](fg:black)\
-$username\
-[](bg:yellow fg:black)\
-$directory\
-[](fg:yellow bg:green)\
-$git_branch\
-[](fg:green bg:cyan)\
-$cmd_duration\
-[](fg:cyan)\
-$line_break\
-$character"""
-
-[username]
-show_always = true
-style_user = "bg:black fg:white"
-format = "[$user]($style)"
-
-[directory]
-style = "bg:yellow fg:black"
-format = "[ $path ]($style)"
-truncation_length = 3
-
-[git_branch]
-symbol = " "
-style = "bg:green fg:black"
-format = "[ $symbol$branch ]($style)"
-
-[cmd_duration]
-style = "bg:cyan fg:black"
-format = "[  $duration ]($style)"
-
-[line_break]
-disabled = false
+add_newline = true
+command_timeout = 200
+format = "[$directory$git_branch$git_status]($style)$character"
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[➜](bold red)"
+error_symbol = "[✗](bold cyan)"
+success_symbol = "[❯](bold cyan)"
+
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "bold cyan"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+format = "[$branch]($style) "
+style = "italic cyan"
+
+[git_status]
+format     = '[$all_status]($style)'
+style      = "cyan"
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""

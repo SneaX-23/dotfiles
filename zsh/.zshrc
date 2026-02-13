@@ -76,7 +76,7 @@ alias t='tmux'
 # shell integrations
 
 # Obsidian setup 
-export VAULT_DIR="$HOME/projects/Obsidian/The Begining"
+export VAULT_DIR="$HOME/Obsidian/The Second Begining"
 
 # Quick jump to vault
 alias vault="cd '$VAULT_DIR'"
