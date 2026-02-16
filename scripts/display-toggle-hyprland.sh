@@ -4,7 +4,7 @@ EXTERNAL="HDMI-1"
 STATE_FILE="/tmp/monitor_mode"
 
 if [[ ! -f "$STATE_FILE" ]]; then
-  echo "extended" >"$STATE_FILE"
+  echo "EXTERNAL" >"$STATE_FILE"
 fi
 
 CURRENT_MODE=$(cat "$STATE_FILE")

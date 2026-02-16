@@ -98,3 +98,5 @@ on() {
 # source omarch alias
 source ~/.local/share/omarchy/default/bash/aliases
 
+# Remove omarchy theme from applying to brave
+alias brm="sudo rm /etc/brave/policies/managed/color.json"
