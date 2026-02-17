@@ -83,17 +83,7 @@ alias vault="cd '$VAULT_DIR'"
 
 alias og="~/.local/bin/obsidian_organize.sh"
 # 'on' command: Create a new note and open it in Neovim
-on() {
-  if [[ $# -eq 0 ]]; then
-    echo "No title provided. Please provide a title."
-    echo "Example: on 'todo_some_day'"
-    return 1
-  fi
-  local title="$1"
-  local filename="${VAULT_DIR}/inbox/${title}.md"
-  mkdir -p "${VAULT_DIR}/inbox"
-  nvim "$filename"
-}
+alias on="~/dotfiles/scripts/on"
 
 # source omarch alias
 source ~/.local/share/omarchy/default/bash/aliases

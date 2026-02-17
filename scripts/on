@@ -1,0 +1,27 @@
+
+#!/bin/bash
+
+VAULT_DIR="$HOME/Obsidian/The Second Begining"
+INBOX_DIR="${VAULT_DIR}/inbox"
+
+if [[ $# -eq 0 ]]; then
+  echo "No title provided."
+  echo "Usage: on \"note title\""
+  exit 1
+fi
+
+title="$*"
+
+slug=$(echo "$title" | tr ' ' '_' | tr -cd '[:alnum:]_-')
+
+formatted_title="$(date "+%Y-%m-%d")_${slug}.md"
+
+mkdir -p "$INBOX_DIR"
+
+file_path="${INBOX_DIR}/${formatted_title}"
+
+if [[ ! -f "$file_path" ]]; then
+  touch "$file_path"
+fi
+nvim "$file_path"
+
