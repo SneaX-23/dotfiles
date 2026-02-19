@@ -2,15 +2,27 @@
   linux-dev "/dev/input/by-id/usb-CX_2.4G_Receiver-event-kbd"
 )
 
+(defvar
+  tap-time 200
+  hold-time 200
+)
+(defsrc
+  a s d f j k l ;
+)
 (defalias
-  caps (tap-hold 200 200 esc lctl)
+  a_mod  (tap-hold $tap-time $hold-time a lctl)
+  s_mod  (tap-hold $tap-time $hold-time s lalt)
+  d_mod  (tap-hold $tap-time $hold-time d lmet)
+  f_mod  (tap-hold $tap-time $hold-time f lsft)
+  j_mod  (tap-hold $tap-time $hold-time j rsft)
+  k_mod  (tap-hold $tap-time $hold-time k rmet)
+  l_mod  (tap-hold $tap-time $hold-time l ralt)
+  sc_mod (tap-hold $tap-time $hold-time ; rctl)
 )
 
-(defsrc
-  caps
-)
+
 
 (deflayer base
-  @caps
+  @a_mod @s_mod @d_mod @f_mod
+  @j_mod @k_mod @l_mod @sc_mod
 )
-
