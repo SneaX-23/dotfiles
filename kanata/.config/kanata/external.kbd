@@ -1,0 +1,16 @@
+(defcfg
+  linux-dev "/dev/input/by-id/usb-CX_2.4G_Receiver-event-kbd"
+)
+
+(defalias
+  caps (tap-hold 200 200 esc lctl)
+)
+
+(defsrc
+  caps
+)
+
+(deflayer base
+  @caps
+)
+

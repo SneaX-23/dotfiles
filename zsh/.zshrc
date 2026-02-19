@@ -81,7 +81,7 @@ export VAULT_DIR="$HOME/Obsidian/The Second Begining"
 # Quick jump to vault
 alias vault="cd '$VAULT_DIR'"
 
-alias og="~/.local/bin/obsidian_organize.sh"
+alias og="~/dotfiles/scripts/obsidian_organize.sh"
 # 'on' command: Create a new note and open it in Neovim
 alias on="~/dotfiles/scripts/on"
 

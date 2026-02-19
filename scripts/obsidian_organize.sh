@@ -1,5 +1,5 @@
 #!/bin/bash 
-VAULT_DIR="$HOME/projects/Obsidian/The Begining" 
+VAULT_DIR="$HOME/Obsidian/The Second Begining" 
 cd "$VAULT_DIR/inbox" || exit 
 for file in *.md; do 
   [ -e "$file" ] || continue
