@@ -1,9 +1,10 @@
 (defcfg
   linux-dev "/dev/input/by-id/usb-CX_2.4G_Receiver-event-kbd"
+  process-unmapped-keys yes
 )
 
 (defvar
-  tap-time 200
+  tap-time 170
   hold-time 200
 )
 (defsrc
