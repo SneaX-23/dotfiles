@@ -5,7 +5,7 @@ return {
     priority = 1000,
     opts = {
       style = "night",
-      transparent = true, -- Keep main transparency
+      transparent = false, -- Keep main transparency
       styles = {
         sidebars = "transparent", -- Keep sidebar transparency
         floats = "transparent", -- Keep float transparency
