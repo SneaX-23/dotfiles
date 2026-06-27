@@ -32,8 +32,17 @@ zinit light Aloxaf/fzf-tab
 
 # Load completions
 autoload -U compinit && compinit
-
 zinit cdreplay -q
+
+# Generate kubectl completions
+if (( $+commands[kubectl] )); then
+    source <(kubectl completion zsh)
+
+    # Enable completion for 'k' alias
+    alias k=kubectl
+    compdef __start_kubectl k
+fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -90,3 +99,6 @@ source ~/.local/share/omarchy/default/bash/aliases
 
 # Remove omarchy theme from applying to brave
 alias brm="sudo rm /etc/brave/policies/managed/color.json"
+
+# Kubectl aliases
+alias k="kubectl"

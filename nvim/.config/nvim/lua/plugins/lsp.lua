@@ -23,6 +23,22 @@ return {
             },
           },
         },
+        yamlls = {
+          settings = {
+            yaml = {
+              schemas = {
+                kubernetes = {
+                  "*.k8s.yaml",
+                  "pod.yaml",
+                  "deployment.yaml",
+                  "service.yaml",
+                },
+              },
+              validate = true,
+              completion = true,
+            },
+          },
+        },
       },
     },
   },
