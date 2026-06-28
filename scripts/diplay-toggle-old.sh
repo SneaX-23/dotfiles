@@ -37,4 +37,4 @@ case "$CURRENT_MODE" in
   ;;
 esac
 
-hyprctl dispatch reload
+hyprctl dispatch reload   
