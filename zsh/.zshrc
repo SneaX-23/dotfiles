@@ -96,4 +96,4 @@ alias brm="sudo rm /etc/brave/policies/managed/color.json"
 alias k="kubectl"
 
 # oh-my-posh
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/robbyrussell-omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/newline-robyrussel.json)"

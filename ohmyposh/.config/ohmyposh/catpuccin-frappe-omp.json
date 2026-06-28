@@ -19,6 +19,12 @@
       "alignment": "left",
       "segments": [
         {
+          "foreground": "#757575",
+          "style": "plain",
+          "template": "\u250c ",
+          "type": "text"
+        },
+        {
           "foreground": "p:os",
           "style": "plain",
           "template": "{{.Icon}} ",
@@ -58,16 +64,36 @@
           "template": "{{ .HEAD }} ",
           "style": "plain",
           "type": "git"
-        },
-        {
-          "style": "plain",
-          "foreground": "p:closer",
-          "template" : "{{ if gt .Code 0 }}x{{ else }}\u279c{{ end }}",
-          "type": "text"
         }
+        // {
+        //   "style": "plain",
+        //   "foreground": "p:closer",
+        //   "template" : "{{ if gt .Code 0 }}x{{ else }}\u279c{{ end }}",
+        //   "type": "text"
+        // }
       ],
       "type": "prompt",
       "newline": true
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#757575",
+          "style": "plain",
+          "template": "\u2514 ",
+          "type": "text"
+        },
+        {
+          "foreground_templates": ["{{ if gt .Code 0 }}#E06C75{{ end }}"],
+          "foreground": "#98C379",
+          "style": "plain",
+          "template": "{{ if gt .Code 0 }}x{{ else }}\u279c{{ end }}",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
     }
   ],
   "final_space": true,
