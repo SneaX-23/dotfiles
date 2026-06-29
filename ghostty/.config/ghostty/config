@@ -1,25 +1,28 @@
 # Dynamic theme colors
 # config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
-theme=Ayu
+
+theme=Aizen Dark
+# theme=Ayu
+# theme=TokyoNight
 
 # background
-background-opacity = 0.9
+background-opacity = 0.6
 background-blur-radius = 0
-
+background-blur = 20
 # Font
 font-family = "JetBrainsMono Nerd Font"
 font-style = Regular
-font-size = 12
+font-size = 13
 
 # Window
 window-theme = ghostty
-window-padding-x = 14
-window-padding-y = 14
+window-padding-x = 12
+window-padding-y = 12
 confirm-close-surface=false
 resize-overlay = never
 gtk-toolbar-style = flat
-
+window-decoration = auto
 # Cursor styling
 cursor-style = "block"
 cursor-style-blink = false
